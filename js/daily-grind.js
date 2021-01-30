@@ -19,11 +19,10 @@ const urlParams = new URLSearchParams(queryString);
 
 if(urlParams.has('day')){//use querystring data
     myDay = urlParams.get('day');
+    myDay = parseInt(myDay);
 }else{//use date object
     let myDay = myDate.getDay();
 }
-
-myDay = parseInt(myDay);
 
 function coffeeTemplate(coffee){
     let myReturn = "";
