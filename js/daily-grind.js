@@ -63,11 +63,11 @@ switch(myDay){
  
         coffee = {
             color: "orange",
-            name: "Flat White",
-            pic: "images/Flat-White.jpg",
-            alt: "A pic of Flat White",
+            name: "Caramel Latte",
+            pic: "images/caramel-latte.jpg",
+            alt: "A pic of Caramel Latte",
             day: "Tuesday",
-            desc: 'If its not flat white, then its not right'
+            desc: 'A latte with Caramel drizzle'
         };
  
     break;   
@@ -92,11 +92,11 @@ switch(myDay){
  
         coffee = {
             color: "red",
-            name: "Cortado",
-            pic: "images/Cortado.png",
-            alt: "A pic of Cortado",
+            name: "Cold Brew",
+            pic: "images/cold-brew.jpg",
+            alt: "A pic of a Cold Brew",
             day: "Thursday",
-            desc: 'I love me some Cortado'
+            desc: 'A coffee brew, but make it cold!'
  
         };
  
@@ -108,11 +108,11 @@ switch(myDay){
     
         coffee = {
             color: "green",
-            name: "Cappuccino",
-            pic: "images/Cappuccino.jpg",
-            alt: "A pic of Cappuccino",
+            name: "Frappaccino",
+            pic: "images/Frappaccino.jpg",
+            alt: "A pic of Frappaccino",
             day: "Friday",
-            desc: `With this cappuccino, i can take on a rhino`
+            desc: `With this Frappaccino, I can take on a rhino!`
            
          };
  
@@ -124,11 +124,11 @@ switch(myDay){
  
         coffee = {
             color: "Blue",
-            name: "Affogato",
-            pic: "images/Affogato.jpg",
-            alt: "A pic of Affogato",
+            name: "Mocha",
+            pic: "images/mocha.jpg",
+            alt: "A pic of Mocha",
             day: "Saturday",
-            desc: `Which will wake me up? mi gato? Or my Affogato?`
+            desc: `I like me some Mocha!`
  
         
         };
@@ -141,17 +141,15 @@ switch(myDay){
  
         coffee = {
             color: "purple",
-            name: "Milk Tea",
-            pic: "images/Milk-Tea.jpg",
-            alt: "A pic of Milk Tea",
+            name: "Pumpkin Spice Latte",
+            pic: "images/pumpkin-spice-latte.jpg",
+            alt: "A pic of Pumpkin Spice Latte",
             day: "Sunday",
-            desc: `Ahhhh some Milk Tea with some Kimchi would be nice...`
+            desc: `Ahhhh some Pumpkin Spice Latte should be for any season!`
         };
  
     break;    
- 
- 
- 
+
 }
  
  
