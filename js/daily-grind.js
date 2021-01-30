@@ -16,116 +16,149 @@ let today = "";
 let coffee = "";
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-
-if(urlParams.has('day')){//use querystring data
+ 
+ 
+if(urlParams.has('day')){
     myDay = urlParams.get('day');
     myDay = parseInt(myDay);
-}else{//use date object
-    let myDay = myDate.getDay();
+ 
+}else{
+    myDay = myDate.getDay();
+ 
 }
-
+ 
+ 
 function coffeeTemplate(coffee){
     let myReturn = "";
-
-    myReturn += `
-        <p>
-            <img src="${coffee.pic}" alt="${coffee.alt}" id="coffee">
-           <strong id="cofee-highlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.pic}'s daily coffee special is <strong>${coffee.name}</strong>, ${coffee.desc}
-        </p>
-    
-    `;
-
+ 
+    myReturn = `
+    <p>
+    <img src="${coffee.pic}" alt="Our ${coffee.alt}" id="coffee">
+    <strong id="coffee-higlight" class="feature">${coffee.day}'s Coffee Special:</strong> ${coffee.day}'s daily special is <strong>${coffee.name}</strong>, ${coffee.desc}
+ 
+    </p>
+        `;
+        
     return myReturn;
 }
-
+ 
 switch(myDay){
-
-    case 0:
-        today = "Sunday";
-        coffee = {
-            color: "lavender",
-            name: "Frappaccino",
-            pic: "images/frappaccino.jpg",
-            alt: "A picture of a Frappaccino",
-            day: "Sunday",
-            desc: `Frappaccino is so good.`
-        };
-
+ 
     case 1:
         today = "Monday";
+ 
         coffee = {
             color: "pink",
             name: "Bubble Tea",
             pic: "images/bubble-tea.jpg",
-            alt: "A picture of a Bubble Tea",
+            alt: "A pic of Bubble Tea",
             day: "Monday",
-            desc: `I like me some Bubble Tea`
+            desc: 'I love Bubble Tea'
         };
-    break;
-
+ 
+    break;    
+ 
     case 2:
         today = "Tuesday";
+ 
         coffee = {
-            color: "chocolate",
-            name: "Cold Brew",
-            pic: "images/cold-brew.jpg",
-            alt: "A picture of a Cold brew",
+            color: "orange",
+            name: "Flat White",
+            pic: "images/Flat-White.jpg",
+            alt: "A pic of Flat White",
             day: "Tuesday",
-            desc: `I like me some Cold Brew`
+            desc: 'If its not flat white, then its not right'
         };
-
+ 
+    break;   
+ 
+ 
     case 3:
         today = "Wednesday";
-        coffee = {
-            color: "tan",
-            name: "Caramel Latte",
-            pic: "images/caramel-latte.jpg",
-            alt: "A picture of a Caramel Latte",
-            day: "Wednesday",
-            desc: `I like me some Caramel Latte`
-        };
-
-    case 4:
-        today = "Thursday";
+ 
         coffee = {
             color: "brown",
-            name: "Drip",
+            name: "drip",
             pic: "images/drip.jpg",
-            alt: "A picture of a Drip Coffee",
-            day: "Thursday",
-            desc: `Sometimes you just need the drip`
+            alt: "A pic of drip coffee",
+            day: "Wednesday",
+            desc: 'Some days you just need the drip!'
         };
-
+ 
+    break;
+ 
+    case 4:
+        today = "Thursday";
+ 
+        coffee = {
+            color: "red",
+            name: "Cortado",
+            pic: "images/Cortado.png",
+            alt: "A pic of Cortado",
+            day: "Thursday",
+            desc: 'I love me some Cortado'
+ 
+        };
+ 
+    break;
+ 
+ 
     case 5:
         today = "Friday";
+    
         coffee = {
-            color: "rosybrown",
-            name: "Pumpkin Spice Latte",
-            pic: "images/pumpkin-spice-latte.jpg",
-            alt: "A picture of a Pumpkin Spice Latte",
+            color: "green",
+            name: "Cappuccino",
+            pic: "images/Cappuccino.jpg",
+            alt: "A pic of Cappuccino",
             day: "Friday",
-            desc: `I like me some Pumpkin Spice Latte`
-        };
-
+            desc: `With this cappuccino, i can take on a rhino`
+           
+         };
+ 
+    break;     
+ 
+ 
     case 6:
         today = "Saturday";
+ 
         coffee = {
-            color: "gray",
-            name: "Mocha",
-            pic: "images/mocha.jpg",
-            alt: "A picture of a Mocha",
+            color: "Blue",
+            name: "Affogato",
+            pic: "images/Affogato.jpg",
+            alt: "A pic of Affogato",
             day: "Saturday",
-            desc: `I like me some Mocha coffee`
+            desc: `Which will wake me up? mi gato? Or my Affogato?`
+ 
+        
         };
-
+ 
     break;
+    
+    
+    case 0:
+        today = "Sunday";
+ 
+        coffee = {
+            color: "purple",
+            name: "Milk Tea",
+            pic: "images/Milk-Tea.jpg",
+            alt: "A pic of Milk Tea",
+            day: "Sunday",
+            desc: `Ahhhh some Milk Tea with some Kimchi would be nice...`
+        };
+ 
+    break;    
+ 
+ 
+ 
 }
+ 
+ 
 console.log(coffee);
-
+ 
 document.getElementById("coffee-output").innerHTML = coffeeTemplate(coffee);
-
-document.getElementsByTagName("HTML")[0].style.backgroundColor = cofee.color;
-
-document.getElementById("cofee-highlight").style.color = cofee.color;
-//alert(today);
-
+ 
+document.getElementsByTagName("HTML")[0].style.backgroundColor = coffee.color;
+ 
+document.getElementById("coffee-highlight").style.color = coffee.color;
